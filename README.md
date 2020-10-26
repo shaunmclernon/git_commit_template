@@ -54,7 +54,7 @@ you can freely adjust the usage as you like.
 
 Alternatively, you can run the commands below to auto the steps above.
 
-    curl -L -o ~/.git_commit_template-test.txt https://raw.githubusercontent.com/shaunmclernon/git_commit_template/master/git_commit_template.txt
+    curl -L -o ~/.git_commit_template.txt https://raw.githubusercontent.com/shaunmclernon/git_commit_template/master/git_commit_template.txt
     git config --global commit.template ~/.git_commit_template.txt
 
 
