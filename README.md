@@ -14,20 +14,21 @@ see our repo  [Git alias configuration for shortcuts and enhancements](https://g
 
 ## Help ##
 
-Subject line imperative uppercase verbs:
+Subject line imperative verbs:
 
-  * Add = Create a capability e.g. feature, test, dependency.
-  * Drop = Delete a capability e.g. feature, test, dependency.
-  * Fix = Fix an issue e.g. bug, typo, accident, misstatement.
-  * Bump = Increase the version of something e.g. a dependency.
-  * Make = Change the build process, or tools, or infrastructure.
-  * Start = Begin doing something; e.g. enable a toggle, feature flag, etc.
-  * Stop = End doing something; e.g. disable a toggle, feature flag, etc.
-  * Optimize = A change that MUST be just about performance, e.g. speed up code.
-  * Document = A change that MUST be only in the documentation, e.g. help files.
-  * Refactor = A change that MUST be just refactoring.
-  * Reformat = A change that MUST be just format, e.g. indent line, trim space, etc.
-  * Rephrase = A change that MUST be just textual, e.g. edit a comment, doc, etc.
+  * feat     (creating a new feature)
+  * drop     (delete a capability e.g. feature, test, dependency)
+  * fix      (Fix an issue e.g. bug, typo, accident, misstatement)
+  * test     (adding or refactoring tests; no production code change)
+  * bump     (increase the version of something e.g. a dependency)
+  * make     (change the build process, or tools, or infrastructure)
+  * start    (begin doing something; e.g. enable a toggle, feature flag, etc)
+  * stop     (end doing something; e.g. disable a toggle, feature flag, etc)
+  * perf     (a change that MUST be just about performance, e.g. speed up code)
+  * doc      (a change that MUST be only in the documentation, e.g. help files)
+  * refactor (a change that MUST be just refactoring)
+  * reformat (a change that MUST be just format, e.g. indent line, trim space, etc)
+  * WIP      (a Work In Progress; for intermediate commits to keep patches reasonably sized)
 
 For the subject line:
   * Use 50 characters maximum.
@@ -42,25 +43,21 @@ For the body text:
 
 Put the template file here:
 
-     ~/.git_commit_template.txt
+    ~/.git_commit_template.txt
 
 Configure git to use the template file by running:
 
-     git config --global commit.template ~/.git_commit_template.txt
-
-Add the template file to our ~/.gitconfig file:
-
-    [commit]
-      template = ~/.git_commit_template.txt
+  git config --global commit.template ~/.git_commit_template.txt
 
 If you prefer other file locations or ways of working,
 you can freely adjust the usage as you like.
 
+Alternatively, you can run the commands below to auto the steps above.
 
-## Tracking ##
+    curl -L -o ~/.git_commit_template-test.txt https://raw.githubusercontent.com/shaunmclernon/git_commit_template/master/git_commit_template.txt
+    git config --global commit.template ~/.git_commit_template.txt
 
-* Package: git_commit_message
-* Version: 6.0.2
-* Updated: 2018-08-27T22:15:57Z
-* Licence: GNU General Public License (GPL-3.0)
-* Contact: Joel Parker Henderson (http://joelparkerhenderson.com)
+
+## Credit
+
+This repo has been based on the great work from Joel Parker Henderson, for reference see here https://github.com/joelparkerhenderson/git_commit_template
